@@ -19,11 +19,6 @@ const store = configureStore();
 // //:::: Store dispatch 'setTextFilter' action
 // store.dispatch(setTextFilter('gas'));// sets filter with 'bill' word
 
-// setTimeout(() => {
-//     store.dispatch(setTextFilter('bill'));
-// }, 3000);
-
-
 
 const jsx = (
     <Provider store={store}>
