@@ -1,6 +1,7 @@
 import React from 'react';
 import ExpenseList from './ExpenseList';
 import ExpenseListFilters from './ExpenseListFilters';
+import ExpensesSummary from './ExpensesSummary';
 
 // old syntax
 /* class ExpenseDashboardPage extends React.Component {
@@ -14,8 +15,9 @@ import ExpenseListFilters from './ExpenseListFilters';
 // new syntax
 const ExpenseDashboardPage = () => (
 
-    <div> 
-    <ExpenseListFilters />
+    <div>
+        <ExpensesSummary />
+        <ExpenseListFilters />
         <ExpenseList />
     </div>
 );
