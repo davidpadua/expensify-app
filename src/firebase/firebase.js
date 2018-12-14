@@ -11,22 +11,25 @@ const config = {
     messagingSenderId: "768918544317"
   };
 firebase.initializeApp(config);
+
 const database = firebase.database();
 
-// child_removed
-database.ref('expenses').on('child_removed', (snapshot) => {
-    console.log(snapshot.key, snapshot.val())
-})
+export {firebase, database as default };
 
-// child_changed
-database.ref('expenses').on('child_changed', (snapshot) => {
-    console.log(snapshot.key, snapshot.val())
-})
+// // child_removed
+// database.ref('expenses').on('child_removed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val())
+// })
 
-// child_added
-database.ref('expenses').on('child_added', (snapshot) => {
-    console.log(snapshot.key, snapshot.val())
-})
+// // child_changed
+// database.ref('expenses').on('child_changed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val())
+// })
+
+// // child_added
+// database.ref('expenses').on('child_added', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val())
+// })
 
 /* database.ref('expenses')
         .once('value')
@@ -53,12 +56,12 @@ database.ref('expenses').on('child_added', (snapshot) => {
 
         console.log(expenses);
 }) */
-database.ref('expenses').push({
-      description: 'Relógio sternglas',
-      amount: 18900,
-      createdAt: 978562695211,
-      note: ''
-})
+// database.ref('expenses').push({
+//       description: 'Relógio sternglas',
+//       amount: 18900,
+//       createdAt: 978562695211,
+//       note: ''
+// })
 
 
 // database.ref('notes/-LTX6hvVcFjOqGAWDkom').update({
